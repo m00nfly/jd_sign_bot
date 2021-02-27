@@ -8,13 +8,13 @@ const rp = require('request-promise');
 const download = require('download');
 require('./JD_DailyBonus')
 // 公共变量
-const serverJ = '';
+const serverJ = '${PUSH_KEY}';
 
 
 
 async function changeFile () {
    let content = await fs.readFileSync('./JD_DailyBonus.js', 'utf8')
-   content = content.replace(/var Key = ''/, `var Key = '${KEY}'`);
+   content = content.replace(/var Key = ''/, `var Key = '${JD_COOKIE}'`);
    await fs.writeFileSync( './JD_DailyBonus.js', content, 'utf8')
 }
 
