@@ -20,6 +20,6 @@ jobs:
             - name: Run app
               run: npm install
               env:
-                Key: ${{ secrets.JD_COOKIE }}
-                serverJ: ${{ secrets.PUSH_KEY }}
+                JD_COOKIE: ${{ secrets.JD_COOKIE }}
+                PUSH_KEY: ${{ secrets.PUSH_KEY }}
             - run: node app.js
