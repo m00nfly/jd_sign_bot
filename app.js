@@ -30,7 +30,7 @@ async function checkKey() {
 
 async function sendNotify (text,desp) {
   const options ={
-    uri:  `https://sc.ftqq.com/${serverJ}.send`,
+    uri:  `https://sc.ftqq.com/${serverJ}.send`, //方糖公众号接口可能会关闭了，等不能用的时候切换接口
     form: { text, desp },
     json: true,
     method: 'POST'
